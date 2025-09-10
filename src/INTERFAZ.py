@@ -31,11 +31,11 @@ def descargar_y_cargar_modelo_frutas():
 
 @st.cache_resource
 def descargar_y_cargar_modelo_placas():
-    """Descargar y cargar modelo de placas"""
+    """Descargar y cargar modelo de placas""" 
     ruta_modelo = "PLACA.pt"
     if not os.path.exists(ruta_modelo):
         st.info("📥 Descargando modelo de placas...")
-        url = "https://drive.google.com/uc?id=11Wv155DGmMyma3j0_w0HqPWLHhKmgfEBd"
+        url = "https://drive.google.com/uc?id=1Wv155DGmMyma3j0_w0HqPWLHhKmgfEBdd"
         gdown.download(url, ruta_modelo, quiet=False)
     
     return YOLO(ruta_modelo)
@@ -472,3 +472,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
