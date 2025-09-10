@@ -24,7 +24,7 @@ def descargar_y_cargar_modelo_frutas():
     ruta_modelo = "W_FRUTA.pt" 
     if not os.path.exists(ruta_modelo):
         st.info("📥 Descargando modelo de frutas...") 
-        url = "https://drive.google.com/uc?id1lfq0_VK9DZsgR-TVGraBrYDUNu-P-hTl"
+        url = "https://drive.google.com/uc?id=1lfq0_VK9DZsgR-TVGraBrYDUNu-P-hTl"
         gdown.download(url, ruta_modelo, quiet=False)
     
     return YOLO(ruta_modelo)
@@ -472,5 +472,6 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
 
