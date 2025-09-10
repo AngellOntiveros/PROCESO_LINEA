@@ -21,10 +21,10 @@ import json
 @st.cache_resource
 def descargar_y_cargar_modelo_frutas():
     """Descargar y cargar modelo de frutas"""
-    ruta_modelo = "best.pt"
+    ruta_modelo = "WEIGHT.pt" 
     if not os.path.exists(ruta_modelo):
         st.info("📥 Descargando modelo de frutas...")
-        url = "https://drive.google.com/uc?id=1SFGVrcUS4DUPeVdBDrAAsU1YpiRoR6RG"
+        url = "https://drive.google.com/uc?id=1UDJfAgxzDZTGLZXsTcASWL4vgqazI5ez"
         gdown.download(url, ruta_modelo, quiet=False)
     
     return YOLO(ruta_modelo)
@@ -470,4 +470,5 @@ def main():
             )
 
 if __name__ == "__main__":
+
     main()
